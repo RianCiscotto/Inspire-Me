@@ -28,7 +28,7 @@
       margin: 0;
       font-size: 1.5rem;
     }
-    .gallery {
+    .galeria {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -47,15 +47,15 @@
   cursor: pointer;
     }
     @media (max-width: 600px) {
-      .gallery {
+      .galeria {
         flex-wrap: nowrap;
       }
-      .gallery img:not(:first-child) {
+      .galeria img:not(:first-child) {
         display: none;
       }
-      .gallery img:first-child {
+      .galeria img:first-child {
         width: 100% !important;
-        height: 70vh !important; 
+        height: 80vh !important; 
       }
       h2 {
         font-size: 1rem;
@@ -74,7 +74,7 @@
     
   </div>
 
-  <div class="gallery" id="imageGallery"></div>
+  <div class="galeria" id="imagemGaleria"></div>
   <button onclick="novaImagem()">Carregar Novas Imagens</button>
 
   <script>
@@ -82,14 +82,14 @@
     const HEIGHT = 1200;
 
     function novaImagem() {
-      const gallery = document.getElementById('imageGallery');
-      gallery.innerHTML = '';
+      const galeria = document.getElementById('imagemGaleria');
+      galeria.innerHTML = '';
       for (let i = 0; i < 4; i++) {
         const img = document.createElement('img');
         img.src = `https://picsum.photos/${WIDTH}/${HEIGHT}?random=${Date.now() + i}`;
         img.width = WIDTH / 2;
         img.height = HEIGHT / 3;
-        gallery.appendChild(img);
+        galeria.appendChild(img);
       }
     }
 
@@ -98,3 +98,4 @@
 
 </body>
 </html>
+
