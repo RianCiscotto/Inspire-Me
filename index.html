@@ -84,7 +84,7 @@
     function novaImagem() {
       const galeria = document.getElementById('imagemGaleria');
       galeria.innerHTML = '';
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 3; i++) {
         const img = document.createElement('img');
         img.src = `https://picsum.photos/${WIDTH}/${HEIGHT}?random=${Date.now() + i}`;
         img.width = WIDTH / 2;
@@ -98,4 +98,5 @@
 
 </body>
 </html>
+
 
